@@ -3,7 +3,7 @@
  *main 
  *
  *Description: Print the lower case alphabet
- *Return: 0
+ *Return: Always 0(success)
  */
 int main(void)
 {
@@ -15,9 +15,5 @@ putchar('a' + c);
 putchar('\n');
 
 return (0);
+
 }
-
-
-
-
-
