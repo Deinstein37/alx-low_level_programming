@@ -5,7 +5,7 @@
  *Return: Always 0 (success)
  */
 
-int nain(void)
+int main(void)
 
 {
 char alphabet;
