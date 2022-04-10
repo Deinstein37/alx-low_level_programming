@@ -2,13 +2,12 @@
 /**
  *main 
  *
- *Description: Print the lowercase alphabet
  *Return: Always 0 (success)
  */
 int main(void)
 
 {
-int alphabet;
+char alphabet;
 
 for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
 {
