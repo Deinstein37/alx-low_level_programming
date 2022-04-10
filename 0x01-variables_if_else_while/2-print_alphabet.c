@@ -6,12 +6,14 @@
  *Return: Always 0 (success)
  */
 int main(void)
+
 {
+char alphabet;
 
-int lowercase;
-for (lowercase = 0; lowercase <= 26; lowercase++)
-putchar('a' + lowercase);
-
+for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
+{
+putchar(alphabet);
+{
 putchar('\n');
 
 return (0);
