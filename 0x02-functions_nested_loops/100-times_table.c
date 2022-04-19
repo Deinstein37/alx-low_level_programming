@@ -1,27 +1,64 @@
 #include "main.h"
 
+int _putchar(char c);
+
 /**
- * print_alphabet_x10 - print alphabet
+ * main - check the code
  *
- * Return: Always 0.
+ * Return: Always 0
  */
-void print_alphabet_x10(void)
+
+int main(void)
 {
-int alphabet;
-int count;
+	int i;
+	int j;
 
+	if (n >= 0 && n <= 15)
+	{
 
-count = 0;
-while (count < 10)
-{
-for (alphabet = 'a' ; alphabet <= 'z'; alphabet++)
-{
-_putchar(alphabet);
-}
+		for (i = 0; i <= n; i++)
+		{
 
-count++;
-_putchar('\n');
-}
+			for (j = 0; j <= n; j++)
+			{
 
+				if ((i * j) < 10)
+				{
+					if (j != 0)
+					{
+						_putchar(' ');
+						_putchar(' ');
+						_putchar(' ');
+					}
+					_putchar((j * i) + '0');
+				}
+
+				else if ((i * j) < 100)
+				{
+					_putchar(' ');
+					_putchar(' ');
+					_putchar((((j * i) / 10) % 10) + '0');
+					_putchar(((j * i) % 10) + '0');
+				}
+
+				else if ((i * j) < 1000)
+				{
+					_putchar(' ');
+					_putchar((((j * i) / 100) % 10) + '0');
+					_putchar((((j * i) / 10) % 10) + '0');
+					_putchar(((j * i) % 10) + '0');
+				}
+			if (j != (n))
+			{
+				_putchar(',');
+			}
+
+			}
+
+		_putchar('\n');
+
+		}
+
+	}
 
 }
