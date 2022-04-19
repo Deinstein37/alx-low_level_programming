@@ -1,14 +1,19 @@
-#include "main.h"
-#include <stdio.h>
-
+#include "holberton.h"
 /**
- * add -prints add two numbers
- *@i: print int i
- *@k: print int k
- * Return: Always 0.
- */
-
-int add(int i, int k)
+  * print_alphabet_x10 - repeats the print_alphabet 10 times.
+  * Return: Nothing.
+  */
+void print_alphabet_x10(void)
 {
-return (i + k);
+	int i;
+	char c;
+
+	for (i = 0; i < 10; ++i)
+	{
+		for (c = 'a'; c <= 'z'; c++)
+		{
+			_putchar(c);
+		}
+		_putchar('\n');
+	}
 }
