@@ -8,7 +8,7 @@ int _putchar(char c);
  * Return: Always 0
  */
 
-int main(void)
+int main(int n)
 {
 	int i;
 	int j;
