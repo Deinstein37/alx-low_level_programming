@@ -1,51 +1,27 @@
 #include "main.h"
 
 /**
- * times_table - function that prints the n times table, starting with 0.
+ * print_alphabet_x10 - print alphabet
  *
- * Return: Always 0
+ * Return: Always 0.
  */
-
-main print_times_table(int n)
+void print_alphabet_x10(void)
 {
-	int row, col;
-	int mult = 0;
+int alphabet;
+int count;
 
-	if (n <= 15 && n >= 0)
-	{
-		for (row = 0; row <= n; row++)
-		{
-			for (col = 0; col <= n; col++)
-			{
-				mult = (row * col);
-				if (mult < 10)
-				{
-					if (col != 0)
-					{
-						_putchar(' ');
-						_putchar(' ');
-						_putchar(' ');
-					}
-					_putchar(mult + '0');
-				}
-				else if (mult < 100)
-				{
-					_putchar(' ');
-					_putchar(' ');
-					_putchar((mult / 10) + '0');
-					_putchar((mult % 10) + '0');
-				}
-				else
-				{
-					_putchar(' ');
-					_putchar((mult / 100) + '0');
-					_putchar(((mult % 100) / 10) + '0');
-					_putchar((mult % 10) + '0');
-				}
-				if (col != n)
-					_putchar(',');
-			}
-			_putchar('\n');
-		}
-	}
+
+count = 0;
+while (count < 10)
+{
+for (alphabet = 'a' ; alphabet <= 'z'; alphabet++)
+{
+_putchar(alphabet);
+}
+
+count++;
+_putchar('\n');
+}
+
+
 }
