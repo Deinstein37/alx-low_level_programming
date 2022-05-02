@@ -28,13 +28,6 @@ int check_digit(char *a)
 	return (num);
 }
 
-/**
- * main -  program that adds positive numbers
- * @argc: arguement count
- * @argv: argument vector
- * Return: int
- **/
-
 int main(int argc, char *argv[])
 {
 	int i, num, res;
