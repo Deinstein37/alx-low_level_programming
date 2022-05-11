@@ -8,10 +8,20 @@
  * @argv: Pointer of array of pointers containing strings entering main
  * Return: Always 0 (Success)
  */
-
 int main(int argc, char **argv)
 {
-	if (argc > 0)
-		printf("%s\n", argv[0]);
-	return (0);
+	int n, ex;
+
+	ex = 0;
+	if (argc != 3)
+	{
+		printf("%s\n", "Error");
+		ex = 1;
+	}
+	else
+	{
+		n = atoi(argv[1]) * atoi(argv[2]);
+		printf("%i\n", n);
+	}
+	return (ex);
 }
