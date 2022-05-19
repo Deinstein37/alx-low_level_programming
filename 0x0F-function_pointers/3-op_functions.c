@@ -1,27 +1,56 @@
-#include <stdlib.h>
 #include "3-calc.h"
+
 /**
-  * get_op_func - decides which math to use based on the operator
-  * @s: pointer to string
-  * Return: result of the operation
-  */
-int (*get_op_func(char *s))(int, int)
+ * op_add - addition operator
+ * @a: first int
+ * @b: second int
+ * Return: sum of 2 numbers
+ */
+int op_add(int a, int b)
 {
-	int i;
-	op_t ops[] = {
-		{"+", op_add},
-		{"-", op_sub},
-		{"*", op_mul},
-		{"/", op_div},
-		{"%", op_mod},
-		{NULL, NULL}
-	};
-	i = 0;
-	while (i < 5)
-	{
-		if (*ops[i].op == *s && !(*(s + 1)))
-			return (ops[i].f);
-		i++;
-	}
-	return (NULL);
+	return (a + b);
+}
+
+/**
+ * op_sub - subtraction operator
+ * @a: first in
+ * @b: second int
+ * Return: difference of 2 numbers
+ */
+int op_sub(int a, int b)
+{
+	return (a - b);
+}
+
+/**
+ * op_mul - product of 2 numbers
+ * @a: first int
+ * @b: second int
+ * Return: product of the numbers
+ */
+int op_mul(int a, int b)
+{
+	return (a * b);
+}
+
+/**
+ * op_div - division of 2 numbers
+ * @a: first int
+ * @b: second int
+ * Return: result of the division of the numbers
+ */
+int op_div(int a, int b)
+{
+	return (a / b);
+}
+
+/**
+ * op_mod - get remainder of the division of 2 numbers
+ * @a: first int
+ * @b: second int
+ * Return: remainder of division of the numbers
+ */
+int op_mod(int a, int b)
+{
+	return (a % b);
 }
