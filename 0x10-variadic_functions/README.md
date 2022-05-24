@@ -1,4 +1,1 @@
 Variadic functions
-
-
-
