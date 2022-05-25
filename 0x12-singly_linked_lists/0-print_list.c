@@ -20,5 +20,5 @@ size_t print_list(const list_t *h)
 		current = current->next;
 		nbr_nodes++;
 	}
-	return (nbr_nodes);
+	return (0);
 }
