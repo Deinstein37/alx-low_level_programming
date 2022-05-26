@@ -1,41 +1,30 @@
 #include "lists.h"
-#include <stdio.h>
 
 /**
- * print_listint_safe - print a linked list only one time
- * @head: head of LL
- * Return: counter of nodes & prints an error if the linked list is a circle
+ * print_listint_safe - prints a linked list, safely
+ * @head: list of type listint_t to print
+ *
+ * Return: number of nodes in the list
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	const listint_t *slow, *fast, *marker;
-	unsigned int counter = 0, flag = 0;
+	size_t num = 0;
+	long int diff;
 
-	if (head == NULL)
-		return (0);
-	marker = slow = head;
-	fast = head->next;
-	while (head != NULL)
+	while (head)
 	{
+		diff = head - head->next;
+		num++;
 		printf("[%p] %d\n", (void *)head, head->n);
-		head = head->next;
-		counter++;
-
-		if (flag == 0 && fast != NULL && fast->next != NULL && slow != NULL)
+		if (diff > 0)
+			head = head->next;
+		else
 		{
-			if (fast == slow)
-			{
-				flag = 1;
-				slow = marker;
-			}
-			fast = fast->next->next;
-		}
-		if (flag == 1 && slow == head)
-		{
-			printf("-> [%p] %d\n", (void *)head, head->n);
+			printf("-> [%p] %d\n", (void *)head->next, head->next->n);
 			break;
 		}
-		slow = slow->next;
 	}
-	return (counter);
+
+	return (num);
 }
+
