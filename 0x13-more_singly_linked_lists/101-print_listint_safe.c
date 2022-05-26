@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
 #include "lists.h"
 
 /**
@@ -13,7 +12,7 @@ size_t print_listint_safe(const listint_t *head)
 {
 	const listint_t *fast_ptr, *slow_ptr;
 	size_t size;
-	
+
 	size = 0;
 
 	if (head == NULL)
@@ -21,7 +20,7 @@ size_t print_listint_safe(const listint_t *head)
 
 	slow_ptr = head;
 	fast_ptr = head->next;
-	
+
 	while (fast_ptr != NULL && fast_ptr < slow_ptr)
 	{
 		size += 1;
