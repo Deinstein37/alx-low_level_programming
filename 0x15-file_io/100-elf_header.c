@@ -1,5 +1,8 @@
-#include "main.h"
+#include "holberton.h"
 #include <stdio.h>
+
+#define MAXSIZE 1204
+#define SE STDERR_FILENO
 
 /**
  * main - create the copy bash script
@@ -22,6 +25,7 @@ int main(int ac, char *av[])
 	output_fd = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, mode);
 	if (output_fd == -1)
 		dprintf(SE, "Error: Can't write to %s\n", av[2]), exit(99);
+
 	do {
 		istatus = read(input_fd, buf, MAXSIZE);
 		if (istatus == -1)
