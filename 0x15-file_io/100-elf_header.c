@@ -2,7 +2,6 @@
 #include <stdio.h>
 
 #define MAXSIZE 1204
-#define SE STDERR_FILENO
 
 /**
  * main - create the copy bash script
