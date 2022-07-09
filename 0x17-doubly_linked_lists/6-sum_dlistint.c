@@ -1,11 +1,9 @@
 #include "lists.h"
-
 /**
  * sum_dlistint - find sum of elements in the list
  * @head: head of linked list
  * Return: sum
  */
-
 int sum_dlistint(dlistint_t *head)
 {
 	int sum;
@@ -14,7 +12,7 @@ int sum_dlistint(dlistint_t *head)
 	{
 
 		sum += head->n;
-		head = head->nextx;
+		head = head->next;
 	}
 	return (sum);
 }
