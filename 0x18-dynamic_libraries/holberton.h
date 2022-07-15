@@ -1,6 +1,8 @@
 #ifndef HEADER_H
 #define HEADER_H
 
+#include <stdio.h>
+
 int _isupper(int c);
 char *_memset(char *s, char b, unsigned int n);
 char *_strcat(char *dest, char *src);
