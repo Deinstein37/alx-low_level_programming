@@ -24,4 +24,5 @@ char *_strstr(char *Ihaystack, char *needle);
 char *_strcpy(char *dest, char *src);
 int _putchar(char c);
 void _puts(char *s);
-#endif
+
+#endif /*"HOLBERTON_H*/
