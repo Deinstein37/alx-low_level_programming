@@ -1,6 +1,8 @@
 #ifndef HEADER_H
 #define HEADER_H
 
+#include <stdio.h>
+
 int _isupper(int c);
 char *_memset(char *s, char b, unsigned int n);
 char *_strcat(char *dest, char *src);
@@ -22,4 +24,5 @@ char *_strstr(char *Ihaystack, char *needle);
 char *_strcpy(char *dest, char *src);
 int _putchar(char c);
 void _puts(char *s);
-#endif
+
+#endif /*"HOLBERTON_H*/
