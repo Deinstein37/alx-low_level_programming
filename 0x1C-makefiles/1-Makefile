@@ -1,7 +1,7 @@
 # Slightly less basic Makefile
 
 CC=gcc
-SRC=holberton.c main.c
+SRC=school.c main.c
 
 all: $(SRC)
-	$(CC) -Wall -Werror -Wextra -pedantic $(SRC) -o holberton
+	$(CC) -Wall -Werror -Wextra -pedantic $(SRC) -school
