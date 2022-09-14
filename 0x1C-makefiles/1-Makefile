@@ -4,4 +4,4 @@ CC=gcc
 SRC=school.c main.c
 
 all: $(SRC)
-	$(CC) -Wall -Werror -Wextra -pedantic $(SRC) -school
+	$(CC) -Wall -Werror -Wextra -pedantic $(SRC) -o school
