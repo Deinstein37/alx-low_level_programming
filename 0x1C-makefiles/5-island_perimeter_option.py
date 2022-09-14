@@ -1,19 +1,24 @@
 #!/usr/bin/python3
+"""
+5-island_perimeter
+"""
 
 
 def island_perimeter(grid):
-    """Python Function to print perimeter of an island"""
+    """Finds perimeter of island provided as grid"""
+    gridWidth = len(grid)
+    gridLength = len(grid[0])
+    island_count = 0
     perimeter = 0
-    for line in grid:
-        perimeter += line.count(1) * 4
-    for line in grid:
-        for i in range(len(line)-1):
-            if line[i] == 1 and line[i+1] == 1:
-                perimeter -= 2
+    sides = 4
 
-    for i in range(len(grid)-1):
-        for j in range(len(grid[0])):
-            if grid[i][j] == 1 and grid[i+1][j] == 1:
-                perimeter -= 2
-
-    return perimeter
+    if gridLength <= 100 and gridWidth <= 100:
+        for i in range(len(grid)):
+            for j in range(len(grid[i])):
+                if grid[i][j] == 1:
+                    island_count += 1
+        if island_count == 0:
+            perimeter = 0
+            return perimeter
+        perimeter = ((sides * island_count)/2) + 2
+        return int(perimeter)
